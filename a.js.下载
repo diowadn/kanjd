@@ -1,0 +1,4 @@
+function f1(){var a=document.getElementsByClassName('search');$('.search').attr('placeholder','查询内容可以是QQ,账号ID,密码,邮箱账号,手机号,电话,身份证,姓名,微博uid,LOL用户名');}
+function f2(){var a=document.getElementsByClassName('search');$('.search').attr('placeholder','查询内容可以是QQ号')}
+function f3(){var a=document.getElementsByClassName('search');$('.search').attr('placeholder','查询内容可以是姓名、电话、身份证');}
+$(function(){$("#copy").click(function(){var Url=document.getElementById("ref");Url.select();document.execCommand("copy");alert("复制成功！");});if(window.location.href.indexOf("https://sgk66.cc/")!=-1){var v=$("#ref").val();var v2=v.replace(/http:\/\/kgaalsjzcz3o2ydu4tvdwcwxyabx26sx2tbdbtmqmc6tamyptpdhk5id.onion\//g,"https://sgk66.cc/");$("#ref").val(v2);};});

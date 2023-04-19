@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)file:///C:/Users/root/Desktop/1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>社工库</title>
+<meta name="description" content="本站是一个暗网中的社工库！">
+<meta name="keywords" content="社工库，暗网社工库，查开房，查密码，查电话，查姓名，查邮箱，猎魔查询，身份证查询">
+
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		html{
+			height: 100%;
+		}
+		body{
+			height: 100%;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+		}
+		form{
+			width: 600px;
+			margin: 0 auto;
+		}
+		form .choose{
+			width: 300px;
+			height: 21px;
+			margin: 0 auto;
+			margin-top: 10px;
+		}
+		form .choose div{
+			width: 100px;
+			text-align: center;
+			float: left;
+		}
+		.search{
+			width: 530px;
+			height: 40px;
+			text-indent: 10px;
+		    border-radius: 4px;
+		    box-shadow: none;
+		    outline: none;
+		    border: 1px solid #090909;
+		}
+		.submit{
+			width: 60px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			outline: none;
+			border-radius: 4px;
+			border: none;
+			cursor: pointer;
+			background-color: #00baff;
+			color: #fff;
+			font-size: 14px;
+		}
+		.top{
+			width: 100%;
+			height: 120px;
+			margin-bottom: 10px;
+		}
+		.top h1{
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		
+		.container{
+			text-align: center;
+		}
+		
+		.table-container {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            overflow: auto;
+            margin: 0 auto;
+            display: inline-block;
+        }
+
+        
+        .table-container thead tr > th:first-child,
+        .table-container tbody tr > td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            background-color: #ccc;
+        }
+
+        
+        .table-container thead tr > th {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        
+        .table-container thead tr > th:first-child {
+            z-index: 3;
+        }
+
+
+        table{
+            table-layout: fixed;
+        }
+        
+        table thead th div{
+        	background-color: #ccc;
+            height: 50px;
+            line-height: 50px;
+        }
+        table thead th:not(:first-child) div{
+            width: 200px;
+        }
+        table thead th:first-child div{
+            width: 50px;
+        }
+        
+        table td div{
+        	padding: 10px;
+            word-wrap: break-word;
+        }
+        table td:not(:first-child) div{
+            /*height: 100px;*/
+            width: 200px;
+        }
+        table td:first-child div{
+            /*height: 100px;*/
+            width: 50px;
+        }
+		
+
+		.header{
+			text-align:right;
+		}
+
+		.content {
+			position: relative;
+		}
+
+		.topAction {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 100;
+		}
+
+		.topAction td {
+			background-color: #ffffff;
+		}
+		
+		@media screen and (max-width: 992px) {
+			form{
+				width:100%;
+			}
+			.search{
+				width:86%;
+			}
+			.search-box > button{
+				width:12%;
+			}
+			table thead th div,table td div{
+				font-size:14px;
+			}
+			table td:not(:first-child) div{
+            	/*height: 100px;*/
+            	width: 100px;
+        	}
+        	table thead th:not(:first-child) div{
+            	width: 100px;
+        	}
+		}
+	</style>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/aes.js"></script>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/mode-ecb.js"></script>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/a.js"></script>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/b.js"></script>
+<script type="text/javascript" src="file:///C:/Users/root/Desktop/js/c.js"></script>
+</head>
+<body>
+<div class="box">
+<div class="header"><a href="file:///C:/Users/root/Desktop/reg.html">注册</a>&nbsp;<a href="file:///C:/Users/root/Desktop/login.html">登录</a></div>
+<div class="top">
+<h1>社工库</h1>
+<form action="https://sgk66.cc/search.html" method="POST">
+<div class="search-box">
+<input class="search" type="text" name="keyword" placeholder="查询内容可以是QQ,账号ID,密码,邮箱账号,手机号,电话,身份证,姓名,微博uid,LOL用户名">
+<button class="submit" type="submit">搜索</button>
+</div>
+<div class="choose">
+<div>
+<input type="radio" name="radiobutton" id="id1" value="laomi" checked="" onclick="f1()"> <label for="id1">综合查询</label>
+</div>
+<div>
+<input type="radio" name="radiobutton" id="id2" value="qunguanxi" onclick="f2()"> <label for="id2">群关系</label>
+</div>
+<div>
+<input type="radio" name="radiobutton" id="id3" value="kaifang" onclick="f3()"> <label for="id3">开房</label>
+</div>
+</div>
+</form>
+</div>
+<center>
+<h3 style="color:red;margin-top:20px"></h3>
+</center>
+<div class="container">
+<div class="table-container">
+<table cellpadding="0" cellspacing="0" border="0" rules="all" style="text-align: center;">
+<thead>
+<tr>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</body></html>

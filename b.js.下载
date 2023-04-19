@@ -1,0 +1,7 @@
+$(function(){function Decrypt(word){var str="asfdfhjhgklhjlklwertru78934234123412433tanbmwupl727ms8325jklj345khiu2gh43i23jk534jk5jk234jk2345"
+var f=str.substring(38,54)
+f=CryptoJS.enc.Utf8.parse(f);var decrypt=CryptoJS.AES.decrypt(word,f,{mode:CryptoJS.mode.ECB,padding:CryptoJS.pad.Pkcs7});return CryptoJS.enc.Utf8.stringify(decrypt).toString();}
+function getck(k){var str=document.cookie;var arr=str.split("; ");for(var i=0;i<arr.length;i++){var arr1=arr[i].split("=");if(arr1[0]==k){return arr1[1];}}
+return "";}
+var n=getck('n');var str1='';$.get("gt.html",{n:n},function(data){str1=data.substring(50);str1=Decrypt(str1);$("#adr").text(str1);})
+var h=$(window).height()-$('.header').height()-$('.top').height()-20-20-10-20-20;$('.table-container').css("max-height",h);$(window).resize(function(){h=$(window).height()-$('.header').height()-$('.top').height()-20-20-10-20-20;$('.table-container').css("max-height",h);});if($('#id3:checked').val()=='kaifang'){if($(window).width()>992){$('table td:not(:first-child) div').css({"width":"500px"});$('table thead th:not(:first-child) div').css({"width":"500px"});}else{$('table td:not(:first-child) div').css({"width":"300px"});$('table thead th:not(:first-child) div').css({"width":"300px"});}}})
